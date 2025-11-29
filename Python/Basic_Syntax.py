@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+import time
 # <- Used to Comment
 # Syntax defines a set of rules that are used to create a Program.
 # Python Syntax have has many similarities to Perl, C, and Java Programming Languages.
@@ -11,40 +11,39 @@
 # Basic Syntaxes
 
 print("Hello world!") # Bless the first print ever
-
+time.sleep(2)
 print() # Used to give space to text and give context
 
 print("Here we can write thing we want the program to...")
 print("print")
-
+time.sleep(2)
 print()
 
 print("By default, on the end of all pythons 'prints' there's this regex '\\n'") # \n
-
+time.sleep(2)
 print()
 
 print("But of course we can change it using 'args', basically we say 'end='XXX'' where XXX is the new regex or word, character, you choose")
 print("It also need a comma between the real text, ex:  print(\"original text\", end='I know Python')")
-
+time.sleep(3)
 print()
 
 print("To test it, let's use 'I know Python' on the end", end='I know Python')
 print("But... we are TOO CLOSE")
-
-print()
-print()
+time.sleep(3)
+print("\n\n")
 
 print("Removing the normal '\\n' makes the next one to print together with the first, so we may need to use spaces, like so")
 
 print("To test it, let's use 'I know Python' on the end ", end='I know Python ')
 print("But... we are still CLOSE")
-
+time.sleep(3)
 print()
 
 print("This can be used better with regex or when intentionally leaving things for the user to read")
 print("That way, we can use variables and not repeat code or prints...")
 
-
+time.sleep(3)
 # Starting with Python Identifiers
 
 # A Python identifier is a name used to identify a variable, function, class, module or other object.
@@ -53,8 +52,8 @@ print("That way, we can use variables and not repeat code or prints...")
 
 # We also have NAMING CONVERNTIONS for Python identifiers
 
-
-
+# As we start with this, i'll change the some to include a sleep (time.sleep()), everything just trowing this is strange
+# Done
 
 
 
