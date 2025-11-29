@@ -184,3 +184,11 @@ print("""We can use it,
 
 time.sleep(3)
 
+print("There's also the possibility to have multiple Statements on a single Line using ; "); print("Like this"); 
+
+time.sleep(1)
+
+print("So, these are the basics Syntaxes, next we will use Varuables and Data Types")
+print()
+
+print("Thank you!")
