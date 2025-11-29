@@ -2,6 +2,8 @@
 import time
 # So, let's get to Variables and Data Types?
 
+print("Here we will see Variables, Data Types and some other things")
+
 wordType = "I'm a string"
 wordsType = "I'm also a string"
 
@@ -21,43 +23,36 @@ print("So, the left side is called a variable, capable of storing a value, the r
 time.sleep(2)
 
 print("Beware, this will be big")
-time.sleep(2)
+time.sleep(3)
 
 print(f"""Here I'll show you the type and the value,
       
 wordType:
-type: {type(wordType)}
-value: {wordType} 
+type: {type(wordType)} // value: {wordType} 
 
 wordsType:
-type: {type(wordsType)}
-value: {wordsType} 
+type: {type(wordsType)} // value: {wordsType} 
 
 numberType:
-type: {type(numberType)}
-value: {numberType} 
+type: {type(numberType)} // value: {numberType} 
         
 floatType:
-type: {type(floatType)}
-value: {floatType} 
+type: {type(floatType)} // value: {floatType} 
         
 arrayType:
-type: {type(arrayType)}
-value: {arrayType} 
+type: {type(arrayType)} // value: {arrayType} 
         
 dictionaryType:
-type: {type(dictionaryType)}
-value: {dictionaryType} 
+type: {type(dictionaryType)} // value: {dictionaryType} 
         
 ClassType:
-type: {type(ClassType)}
-value: {ClassType} 
+type: {type(ClassType)} // value: {ClassType} 
         
 instanceType:
-type: {type(instanceType)}
-value: {instanceType} 
+type: {type(instanceType)} // value: {instanceType} 
 
 """)
+
 
 time.sleep(2)
 print("That was huge, there's plenty of types ")
@@ -68,7 +63,7 @@ print("We can also change the values on these variables, we just assign them lik
 print("Before:", wordType)
 wordType = "Still a string but longer"
 time.sleep(2)
-print("After:", wordType)
+print("After:", wordType,end="\n\n")
 time.sleep(2)
 
 print("We can do it with other types and change types midway")
@@ -78,13 +73,217 @@ age = 20
 print(f"This is my age {age} and ageType {type(age)}")
 time.sleep(2)
 age = "twenty"
-print(f"This is my new age {age} and new ageType {type(age)}")
+print(f"This is my new age {age} and new ageType {type(age)}",end="\n\n")
 time.sleep(2)
 
+
+print("We can also do operations, be it with +, -, /, *, ** (Exponentiation), % (Remainder of a division) and // (Floor division)",end="\n\n")
+
+
+print("We can calculate things on print and also on variables, like so (we are using 10 for the operations)")
+
+addition = 10 + 10
+subtraction = 10 - 10
+multiplication = 10 * 10
+exponentiation = 10 ** 10
+division = 10 / 10
+remainderDivision = 10 % 10
+floorDivision = 10 //10
+
+print(f"""
+These are the results:
+addition: {addition}
+subtraction: {subtraction}
+multiplication: {multiplication}
+exponentiation: {exponentiation}
+division: {division}
+remainderDivision: {remainderDivision}
+floorDivision: {floorDivision}
+""")    
+time.sleep(3)
+print("Just as demonstration, 10 + 10 is:", 10+10)
+time.sleep(1)
+
+print("We also use variables as Counters, so we know where we are in a loop")
+time.sleep(2)
+print("For example",end="\n\n")
+time.sleep(2)
+
+
+ten_counter = 0        
+while True:
+    if(ten_counter <= 5):
+        print(f"We are in the loop for the {ten_counter} time")
+        time.sleep(1)
+        ten_counter += 1
+        pass
+    else:
+        break
+
+print("\nCounter can be incremented in various ways")
+time.sleep(2)
+
+print("Be it using 'variable += number' 'variable = OPERATOR number' 'variable = OPERATOR VARIABLE'",end="\n\n")
+time.sleep(2)
+
+print("We have two types of variables, global and temporary, globals are defined outside loops and functions")
+time.sleep(2)
+print("Temporay variables are defined inside loops or functions, they exists until the function is finished or exiting the loop",end="\n\n")
+time.sleep(2)
+
+global_string = "I'm global"
+def functionEX():
+    temp_string = "I'm temporary"
+try:
+    print(temp_string) # type: ignore
+except:
+    pass
+
+print("I can print variable global_string but I can't even print temp_string")
+print(global_string,end="\n\n")
+time.sleep(3)
+
+print("There's boolean flags too, True or False, we can use it to safeproof function and only allow somethiing if it's true")
+time.sleep(1)
+print("I've used the True statement to utilize the loop as you can se above",end="\n\n")
+
+print("As another example:",end="\n\n")
+
+toggle = True
+for y in range(2):
+    if toggle:
+        print(f"Toggle is {toggle}")
+    else:
+        print(f"Toggle is {toggle}")
+    toggle = not toggle
+time.sleep(3)
+
+
+print("\n\nThere's a way to use functions with the prints, but with limitations")
+print("I'll show it using another print")
+time.sleep(2)
+
+def greet(verbose = False):
+    if verbose:
+        print("We are using verbose True here")
+    else:
+        print("We are False here")
+
+greet()
+time.sleep(2)
+
+greet(verbose = True)
+time.sleep(2)
 print()
-print("We can also do operations, be it with +, -, /, *, ** (Exponentiation), % (Remainder of a division) and // (Floor division)")
+
+print("As for built-in functions, we can sort numbers")
+time.sleep(2)
+
+print(sorted([3,2,8,4,1,6,8,22,99,9,32]),end="\n\n")
+time.sleep(2)
+
+print("We can reverse it too")
+time.sleep(2)
+
+print(sorted([3,2,8,4,1,6,8,22,99,9,32], reverse=True))
+time.sleep(3)
+print("\n\n")
+
+print("I'll present now some other operations as well")
+
+print("So, True and False with comparations")
+time.sleep(3)
+
+age = 21
+is_adult = age > 18
+
+if(is_adult):
+    print(f"We are adults, the statement is {is_adult}")
+if(not is_adult):
+    print(f"We are not adults, the statement is {is_adult}")
+time.sleep(2)
+print("\n\n")
+
+print("There's also loop with variables")
+time.sleep(3)
+
+
+colors = [
+     "red",
+     "orange",
+     "yellow"
+     ]
+
+for color in colors:
+     print(color)
 print()
+time.sleep(3)
+
+print("Now we'll see some about ditcs, sets in general")
+
+contacts = [
+    ("Linda", "111-2222-3333", "linda@example.com"),
+    ("Joe", "444-5555-6666", "joe@example.com"),
+    ("Lara", "7777-8888-9999", "lara@example.com"),
+]
+for contact in contacts:
+    print(contact)
+
+print("\n\n")
+time.sleep(3)
+print("With this, we can go around the contacts, but there's everything together, let's strip this thing")
+print("\n\n")
+time.sleep(2)
+
+print("Let's start with giving a name to those variables, we have 3 datas, lets name them espectively")
+time.sleep(2)
+print("\n\n")
+print("Name, Phone and Email, we will only print the name and phone here")
+
+for name, phone, email in contacts:
+    print(name, phone)
+
+print("\n\n")
 
 
+print("We will go a bit about matrix right now")
+time.sleep(2)
+print("Basically, we make tuples together")
 
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+]
+for i in matrix:
+    for j in i:
+        print(f"Matrix number: {j}")
 
+print("\n\n")
+
+print("Working with Public and Non-Public variables names")
+print("")
+time.sleep(2)
+
+_timeout = 30
+
+print(f"Use them in functions")
+
+def get_timeout():
+    return _timeout
+
+print(f"We can print them: {_timeout}")
+
+print("But a non-public variable is a variable that shouldn't be used outside its defining module")
+
+time.sleep(3)
+
+print("Variables can use type hints")
+
+#  variable: data_type [= value]
+
+number: int = 30
+
+print(f"Number we defined: {number}")
+time.sleep(2)
+print("This way, you can define specifically what type you want without mixing double, int and everything else")
