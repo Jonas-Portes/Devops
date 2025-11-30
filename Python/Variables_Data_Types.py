@@ -383,3 +383,53 @@ name, number, email = contacts[1] # We use 1 here because we want to show the se
 
 print(f"Name: {name}, number: {number}, email: {email}", end="\n\n")
 time.sleep(3)
+
+
+# User input
+
+print("We can have the user make inputs too, this way we can manipulate data" \
+"an the user can interact with the program." \
+"Right now we'll see inputs from CMD/terminal")
+
+user_input = input("Type some text here: ", end="\n\n")
+
+print(f"As you've seen, the programs waits to read the user input, you wrote: {user_input}", end="\n\n")
+time.sleep(3)
+
+
+
+# Loops, we have seen some for and while
+
+
+print("There's a lot we can talk about loops, right now we will cover assigning expressions" \
+"A 'while' loop runs until the first set condition is break." \
+"A 'for' loop runs until is has finished the first set condition", end="\n\n")
+time.sleep(3)
+
+user_input = input("Type some text here: ")
+user_input_list =[]
+
+while user_input != "stop":
+    print(f"you wrote: {user_input}")
+    user_input = input("Type some text here: (text 'stop' to break the loop)")
+    user_input_list.append(user_input)
+
+print()
+print("Everything you wrote was showed and stored within the loop, and you broke the loop with 'stop'" \
+"Still, there's another way you can write the code above", end="\n\n")
+time.sleep(3)
+
+user_input = ""
+
+while (user_input := input("Type some text here: (text 'stop' to break the loop)")) != "stop":
+    print(f"you wrote: {user_input}")
+    user_input_list.append(user_input)   
+
+
+print("I's a bit shorter and we use new expressions, ':=' means that the key variable is set and comparared with it's outside the parentheses" \
+"Meanwhile, '!=' means different, this way we have the same logic from the other code, but with expressions and sometimes, wirting this way can make the code runs faster")
+time.sleep(3)
+
+
+
+
