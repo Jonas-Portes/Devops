@@ -319,6 +319,67 @@ print("Popped array:", array, end="\n\n")
 time.sleep(3)
 
 
-print("Parallel assignment",end="\n\n")
+print("Parallel assignment", end="\n\n")
+
+print("Python allows you to run multiple assignments using a single line, which makes it easier to preset some values")
+time.sleep(2)
+
+is_adult = is_logged = is_mobile = False
+
+print("Here, we've set 3 variables as False")
 
 
+print(f"is_adult ={is_adult}, is_logged = {is_logged}, is_mobile = {is_mobile}")
+time.sleep(2)
+
+print("This is usefull when resetting a program or just assigning mutiple things in one line", end="\n\n")
+time.sleep(2)
+
+print("We can set other variables using the list from before")
+
+# Remember contacts? no? it's here just to refresh our memory
+
+contacts = [
+    ("Linda", "111-2222-3333", "linda@example.com"),
+    ("Joe", "444-5555-6666", "joe@example.com"),
+    ("Lara", "7777-8888-9999", "lara@example.com"),
+]
+
+person = ("Lara", "7777-8888-9999", "lara@example.com")
+
+print("Every value inside a list has it's own index, and we use this index to attribute the value")
+time.sleep(2)
+
+name = person[0]
+number = person[0]
+email = person[0]
+
+print(f"Name: {name}, number: {number}, email: {email}", end="\n\n")
+time.sleep(2)
+
+print("We have done this before using a loop, here I'm just demonstrating that we can assign these manually one by one")
+time.sleep(3)
+
+print("Also, as we used on the for loop, we can assign recpectively")
+time.sleep(2)
+
+person = ("Robert", "1234-1234-9999", "robert.jr@example.com")
+
+name, number, email = person
+
+print(f"Name: {name}, number: {number}, email: {email}", end="\n\n")
+time.sleep(2)
+
+contacts = [
+    ("Linda", "111-2222-3333", "linda@example.com"),
+    ("Joe", "444-5555-6666", "joe@example.com"),
+    ("Lara", "7777-8888-9999", "lara@example.com"),
+]
+
+print("It's possible to do it with matrix too")
+time.sleep(2)
+
+name, number, email = contacts[1] # We use 1 here because we want to show the second list, Joe information
+
+print(f"Name: {name}, number: {number}, email: {email}", end="\n\n")
+time.sleep(3)
