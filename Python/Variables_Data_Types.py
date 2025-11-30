@@ -326,10 +326,10 @@ time.sleep(2)
 
 is_adult = is_logged = is_mobile = False
 
-print("Here, we've set 3 variables as False")
+print("Here, we've set 3 variables as False\n")
 
 
-print(f"is_adult ={is_adult}, is_logged = {is_logged}, is_mobile = {is_mobile}")
+print(f"is_adult = {is_adult}, is_logged = {is_logged}, is_mobile = {is_mobile}")
 time.sleep(2)
 
 print("This is usefull when resetting a program or just assigning mutiple things in one line", end="\n\n")
@@ -391,7 +391,7 @@ print("We can have the user make inputs too, this way we can manipulate data" \
 "an the user can interact with the program." \
 "Right now we'll see inputs from CMD/terminal")
 
-user_input = input("Type some text here: ", end="\n\n")
+user_input = input("Type some text here: \n\n")
 
 print(f"As you've seen, the programs waits to read the user input, you wrote: {user_input}", end="\n\n")
 time.sleep(3)
@@ -432,4 +432,116 @@ time.sleep(3)
 
 
 
+# Modular code, Scopes
 
+print("Right now we will use here another piece code that's in another file")
+time.sleep(2)
+
+print("The file is called 'config.py' there's some settings there and we need it here." \
+"So, we will import it 'like' I've been doing with time.sleep()")
+time.sleep(3)
+
+from config import settings
+
+print("The import is different because we are only importing one variable, we can use it to import everything we write to, not just variables")
+time.sleep(3)
+
+print(f"We can call it like it was defined here: {settings["background"]}")
+time.sleep(2)
+
+print("Let's import some functions too, two in one line")
+time.sleep(3)
+
+from config import cars, plane
+
+cars("Buggati")
+plane()
+
+print("As seen, we can use and even pass args trough them, the code was executed trough another script and anything that was set there won't be stored here.")
+time.sleep(3)
+
+# OOP -> Object Oriented Programming
+
+print("Now we've come to a complicated topic, OOP, meaning Object Oriented Programming." \
+"Here we will instantiate classes and initialize other things")
+time.sleep(3)
+
+print("Let's import a employ function from 'employees' and set some employees while instantiating the class")
+time.sleep(1)
+
+
+from employees import Employee
+
+marcus = Employee("Marcus Rich", "Software Engineer", 30000)
+robert = Employee("Robert Poor", "DataCenter Operator", 10000)
+
+print("We have a display_profile function inside the class, let's see if what we did work.")
+time.sleep(1)
+
+marcus.display_profile()
+robert.display_profile()
+
+print("""Everything is working fine, the class was imported and instantiate, 
+we can use functions here from another code and we are saving only what we need.\n""")
+time.sleep(3)
+
+print("Also, inside the class we have made a counter to keep track of our employees, we can also call that.")
+time.sleep(2)
+
+print(f"Total employees: {Employee.count}")
+time.sleep(2)
+
+print("""We can only call the Class directly when we are using variables from that code, like we did with the 'count'.
+On the same not, we can actually call the 'count' from everything that uses that class, for example, we call call count using marcus or robert, meanwhile they are separated variables, we can modify as we see fit.
+""")
+time.sleep(4)
+
+print(f"Marcus Count: {marcus.count}")
+print("Then modify to 300")
+marcus.count = 300
+time.sleep(3)
+
+print(f"Marcus Count: {marcus.count}")
+print("Meanwhile, on robert or Employee")
+time.sleep(3)
+
+
+print(f"Robert Count: {robert.count}")
+print(f"EmployeeClass Count: {Employee.count}\n")
+
+print("As Marcus count is not linked anymore, when  we change EmployeeClass count, only the Class and the Robert will change")
+time.sleep(3)
+
+
+print(f"Marcus Count: {marcus.count}")
+print(f"Robert Count: {robert.count}")
+print(f"EmployeeClass Count: {Employee.count}\n")
+time.sleep(3)
+
+
+print("As we are finished here, let's show the last thing about Variables here, the Delete function")
+
+print("I can't really show it without breking the code, but with the 'del' function we can delete our variables")
+time.sleep(2)
+
+del marcus
+
+print("Deleting here only makes the variable inaccessible and free the memory, the class won't refresh the Employees count")
+time.sleep(2)
+
+print(f"EmployeeClass Count: {Employee.count}")
+
+print("We can delete mutiple vars on the same line, even classes")
+time.sleep(1)
+
+del robert, Employee, wordType, contact, contacts, color, is_adult, age, y, toggle, global_string, ten_counter, floorDivision, remainderDivision, division, exponentiation, multiplication, subtraction, addition, instanceType, dictionaryType, arrayType, floatType, numberType, wordsType, settings, user_input_list, user_input, email, number, person, is_mobile, is_logged, array, _timeout, j, i, matrix, phone, name
+
+print("It's possible to delete even functions and everything imported")
+
+del functionEX, ClassType, time
+
+print("We don't need to delete all variables vefore finishing a program, but we can use it so it won't be used anymore")
+print("Well, see you next time!")
+
+
+del print
