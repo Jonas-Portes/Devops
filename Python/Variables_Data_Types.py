@@ -543,5 +543,3 @@ del functionEX, ClassType, time
 print("We don't need to delete all variables vefore finishing a program, but we can use it so it won't be used anymore")
 print("Well, see you next time!")
 
-
-del print
