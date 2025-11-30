@@ -258,6 +258,7 @@ matrix = [
 for i in matrix:
     for j in i:
         print(f"Matrix number: {j}")
+        time.sleep(1)
 
 print("\n\n")
 
@@ -277,13 +278,47 @@ print(f"We can print them: {_timeout}")
 print("But a non-public variable is a variable that shouldn't be used outside its defining module")
 
 time.sleep(3)
+print("\n\n")
 
 print("Variables can use type hints")
 
-#  variable: data_type [= value]
+# variable: data_type = value
 
 number: int = 30
 
 print(f"Number we defined: {number}")
 time.sleep(2)
 print("This way, you can define specifically what type you want without mixing double, int and everything else")
+print("\n\n")
+print("When working with list, tuples, dicts and sets things can get messy, but with these hints it's easier to manage, know and define the types correctly")
+
+
+colors: dict[str, tuple[int, int, int]] = {
+    "Red": (255, 0, 0),
+    "Green": (0, 255, 0),
+    "Blue": (0, 0, 255),
+    "Yellow": (255, 255, 0),
+    "Black": (0, 0, 0),
+    "White": (255, 255, 255),
+}
+
+print()
+print("These types can get new values appending the list or delete it poping it")
+
+array = ["type", "theType"]
+print("Original array:", array)
+time.sleep(2)
+
+array.append ("The Hype Type")
+print("Appended array:", array)
+time.sleep(2)
+
+
+array.pop(2)
+print("Popped array:", array, end="\n\n")
+time.sleep(3)
+
+
+print("Parallel assignment",end="\n\n")
+
+
