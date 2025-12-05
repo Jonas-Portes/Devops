@@ -1,8 +1,12 @@
+#!/usr/bin/python3
 # Lists, Tuples, Sets and Dictionaries
 # Let's begin
 
+# Those as collections -> single "variable" used to store mutiple values
 """
-Sets are unique arrays with no duplicates
+List    = []    Ordered and changeable. Can duplicate.
+Set     = {}    Unordered and immutable. Can add/remove. Cannot duplicate
+Tuple   = ()    ordered and unchangeable. Can duplicate. Faster
 """
 
 numbers = [1, 2, 1 , 12, 1, 2, 3, 4, 5, 5, 4, 8, 7, 12]
@@ -66,4 +70,16 @@ else:
 
   
 
+
+# Tuples
+
+fruits = ("apple", "orange", "banana", "coconut", "strawberry","coconut")
+
+print(fruits)
+
+print("strawberry" in fruits)
+
+print("THERE's this many coconuts:", fruits.count("coconut"))
+
+print(fruits.index("orange"))
 

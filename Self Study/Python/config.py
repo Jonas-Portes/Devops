@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 settings = {
     "background": "black",
     "foreground": "white",
